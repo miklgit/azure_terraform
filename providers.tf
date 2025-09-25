@@ -14,6 +14,12 @@ terraform {
     }
   }
   backend "http" {}
+  backend "azurerm" {
+    resource_group_name  = "rg_tfstate"
+    storage_account_name = "mytfstate"
+    container_name       = "tfstate"
+    key                  = "terraform.tfstate"
+  }
 }
 
 provider "azurerm" {
