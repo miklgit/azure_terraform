@@ -1,7 +1,7 @@
-variable "azure_subscription_id" { sensitive = true }
-variable "azure_tenant_id" { sensitive = true }
-variable "azure_client_id" { sensitive = true }
-variable "azure_client_secret" { sensitive = true }
+# variable "azure_subscription_id" { sensitive = true }
+# variable "azure_tenant_id" { sensitive = true }
+# variable "azure_client_id" { sensitive = true }
+# variable "azure_client_secret" { sensitive = true }
 
 variable "resource_group_location" {}
 variable "resource_group_name_prefix" {}
