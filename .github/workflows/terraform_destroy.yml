@@ -8,7 +8,6 @@ jobs:
     name: Terraform Init & Destroy on Azure
     runs-on: ubuntu-latest
 
-#### Terraform détecte automatiquement les variables ARM_* (fourni par la CI) et utilise l’authentification via Service Principal.
     env:
       ARM_CLIENT_ID: ${{ secrets.AZURE_CLIENT_ID }}
       ARM_CLIENT_SECRET: ${{ secrets.AZURE_CLIENT_SECRET }}
