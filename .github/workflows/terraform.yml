@@ -8,13 +8,12 @@ jobs:
     name: Terraform Init & Apply on Azure
     runs-on: ubuntu-latest
 
+#### Terraform détecte automatiquement les variables ARM_* (fourni par la CI) et utilise l’authentification via Service Principal.
     env:
-      TF_VAR_azure_client_id: ${{ secrets.AZURE_CLIENT_ID }}
-      TF_VAR_azure_client_secret: ${{ secrets.AZURE_CLIENT_SECRET }}
-      TF_VAR_azure_subscription_id: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
-      # TF_VAR_azure_tenant_id: ${{ secrets.AZURE_TENANT_ID }}
-      TF_VAR_azure_tenant_id: "297246f1-5c28-4f6f-88aa-8990cb7383b1"
-      # TF_VAR_location: ${{ secrets.AZURE_LOCATION }}
+      ARM_CLIENT_ID: ${{ secrets.AZURE_CLIENT_ID }}
+      ARM_CLIENT_SECRET: ${{ secrets.AZURE_CLIENT_SECRET }}
+      ARM_SUBSCRIPTION_ID: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
+      ARM_TENANT_ID: ${{ secrets.AZURE_TENANT_ID }}
 
     steps:
       - name: Checkout repository
