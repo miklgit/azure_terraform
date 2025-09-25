@@ -16,8 +16,8 @@ terraform {
   backend "http" {}
   backend "azurerm" {
     resource_group_name  = "rg_tfstate"
-    storage_account_name = "mytfstate"
-    container_name       = "tfstate"
+    storage_account_name = "storageaccounttfstate1"
+    container_name       = "containertfstate1"
     key                  = "terraform.tfstate"
   }
 }
