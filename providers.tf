@@ -24,14 +24,16 @@ terraform {
 provider "azurerm" {
   features {}
   subscription_id = var.azure_subscription_id
-  tenant_id       = var.azure_tenant_id
+  # tenant_id       = var.azure_tenant_id
+  tenant_id       = "297246f1-5c28-4f6f-88aa-8990cb7383b1"
   client_id       = var.azure_client_id
   client_secret   = var.azure_client_secret
 }
 
 provider "azapi" {
   subscription_id = var.azure_subscription_id
-  tenant_id       = var.azure_tenant_id
+  # tenant_id       = var.azure_tenant_id
+  tenant_id       = "297246f1-5c28-4f6f-88aa-8990cb7383b1"
   client_id       = var.azure_client_id
   client_secret   = var.azure_client_secret
 }
