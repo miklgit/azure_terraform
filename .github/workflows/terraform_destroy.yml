@@ -1,11 +1,11 @@
-name: Terraform Azure Deploy
+name: Terraform Azure Destroy
 
 on:
   workflow_dispatch:  # 👈 Déclenchement manuel uniquement
 
 jobs:
   terraform:
-    name: Terraform Init & Apply on Azure
+    name: Terraform Init & Destroy on Azure
     runs-on: ubuntu-latest
 
 #### Terraform détecte automatiquement les variables ARM_* (fourni par la CI) et utilise l’authentification via Service Principal.
